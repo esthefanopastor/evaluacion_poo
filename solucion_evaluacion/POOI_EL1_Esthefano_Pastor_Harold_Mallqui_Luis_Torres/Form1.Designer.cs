@@ -31,15 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtCantcom = new System.Windows.Forms.TextBox();
+            this.btnProcesar = new System.Windows.Forms.Button();
+            this.cboNomMed = new System.Windows.Forms.ComboBox();
+            this.LwMostrar = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label1
@@ -73,87 +68,44 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Cantidad a comprar";
             // 
-            // label5
+            // txtCantcom
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 373);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Descuento S/.";
+            this.txtCantcom.Location = new System.Drawing.Point(277, 164);
+            this.txtCantcom.Name = "txtCantcom";
+            this.txtCantcom.Size = new System.Drawing.Size(188, 26);
+            this.txtCantcom.TabIndex = 9;
             // 
-            // label6
+            // btnProcesar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 321);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 18);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Subtotal S/.";
+            this.btnProcesar.Location = new System.Drawing.Point(349, 505);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(116, 26);
+            this.btnProcesar.TabIndex = 13;
+            this.btnProcesar.Text = "Procesar";
+            this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
-            // label7
+            // cboNomMed
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 431);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Total S/.";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(277, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(277, 315);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(188, 26);
-            this.textBox2.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(277, 370);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(188, 26);
-            this.textBox3.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(277, 428);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(188, 26);
-            this.textBox4.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(349, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 26);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Procesar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboNomMed.FormattingEnabled = true;
+            this.cboNomMed.Items.AddRange(new object[] {
             "Azitromicina 500 mg",
             "Ivermectina 6mg ",
             "Hidroxicloriquina 400mg"});
-            this.comboBox1.Location = new System.Drawing.Point(277, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 28);
-            this.comboBox1.TabIndex = 14;
+            this.cboNomMed.Location = new System.Drawing.Point(277, 119);
+            this.cboNomMed.Name = "cboNomMed";
+            this.cboNomMed.Size = new System.Drawing.Size(187, 28);
+            this.cboNomMed.TabIndex = 14;
+            // 
+            // LwMostrar
+            // 
+            this.LwMostrar.HideSelection = false;
+            this.LwMostrar.Location = new System.Drawing.Point(39, 245);
+            this.LwMostrar.Name = "LwMostrar";
+            this.LwMostrar.Size = new System.Drawing.Size(427, 223);
+            this.LwMostrar.TabIndex = 17;
+            this.LwMostrar.UseCompatibleStateImageBehavior = false;
+            this.LwMostrar.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -161,15 +113,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(539, 556);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.LwMostrar);
+            this.Controls.Add(this.cboNomMed);
+            this.Controls.Add(this.btnProcesar);
+            this.Controls.Add(this.txtCantcom);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -188,15 +135,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtCantcom;
+        private System.Windows.Forms.Button btnProcesar;
+        private System.Windows.Forms.ComboBox cboNomMed;
+        private System.Windows.Forms.ListView LwMostrar;
     }
 }
 
