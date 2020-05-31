@@ -20,30 +20,31 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            Central obj = new Central();
+            Norte norte = new Norte
+            {
+                NombreMedicamento = cboNombreMedicamento.SelectedIndex
+            };
 
-            //Leemos los datos y asignamos al objeto
+            if (txtCantidadMedicamento.Text != "")
+            {
+                norte.Cantidad = Convert.ToInt32(txtCantidadMedicamento.Text);
+            }
 
-            obj.NombreMedicamento = cboNomMed.SelectedIndex;
-            obj.Cantidad = Convert.ToInt32(txtCantcom.Text);
+            double subtotal = norte.ObtenerSubtotal();
 
-            
+            double descuento = norte.ObtenerDescuento();
 
-               
+            double total = subtotal - descuento;
 
-            
+            ListViewItem item = new ListViewItem(cboNombreMedicamento.Text);
+            item.SubItems.Add(norte.Cantidad.ToString());
+            item.SubItems.Add("S/. " + norte.ObtenerSubtotal().ToString());
+            item.SubItems.Add("S/. " + norte.ObtenerDescuento().ToString());
+            item.SubItems.Add("S/. " + (norte.ObtenerSubtotal() - norte.ObtenerDescuento()).ToString());
+
+            lwResultados.Items.Add(item);
         }
     }
 }

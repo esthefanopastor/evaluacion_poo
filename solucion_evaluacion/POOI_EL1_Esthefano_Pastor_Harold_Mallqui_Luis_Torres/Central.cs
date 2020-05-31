@@ -25,7 +25,7 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
                 return descuento;
             }
 
-            return descuento;
+            return Math.Round(descuento, 2);
         }
 
         public virtual double ObtenerSubtotal()
@@ -43,7 +43,7 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
                     subtotal = Cantidad * 9.50;
                     break;
             }
-            return subtotal;
+            return Math.Round(subtotal, 2);
         }
     }
 }
