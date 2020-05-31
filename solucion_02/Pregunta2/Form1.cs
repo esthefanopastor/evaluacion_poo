@@ -15,23 +15,23 @@ namespace Pregunta2
 
         //Declarar la lista de equipos
         List<Equipo> Eqp = new List<Equipo>();
-        
+
 
         public Form1()
         {
-            
+
             InitializeComponent();
             txtNumeroSerie.Focus();
             cboMarca.SelectedIndex = 0;
             GenerarCodigo();
             txtFechaInventario.Text = Convert.ToString(DateTime.Now);
-            
+
         }
 
         void GenerarCodigo()
         {
 
-            //Generar el codigo del participante
+            //Generar el codigo del equipo
             int cod = 0;
             if (Eqp.Count != 0)
             {
@@ -42,14 +42,12 @@ namespace Pregunta2
             cod++;
             txtCodigo.Text = "EQP" + cod.ToString().PadLeft(3, '0');
 
-            
+
         }
 
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
-            //Validar si el DNI ya fue registrado
             Equipo p = Eqp.Find(x => x.Codigo.Equals(txtCodigo.Text));
             if (p != null)
             {
@@ -61,7 +59,7 @@ namespace Pregunta2
 
             //Creacion de la clase equipo 
             Equipo obj = new Equipo();
-            
+
 
             //Leemos los datos y asignamos al objeto 
 
@@ -78,7 +76,7 @@ namespace Pregunta2
             txtFechaInventario.Text = Convert.ToString(DateTime.Now);
             txtNumeroSerie.Focus();
 
-
+            Listar();
         }
 
         void Limpiar()
@@ -87,15 +85,13 @@ namespace Pregunta2
             txtDescripcion.Clear();
             txtFechaInventario.Clear();
             txtPrecio.Clear();
-           
-
         }
 
-        
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-           // Obtener el participante por el codigo
+            // Obtener el equipo por el codigo
             Equipo obj = Eqp.Find(x => x.Codigo.Equals(txtCodigo.Text));
 
             if (obj == null)
@@ -110,14 +106,15 @@ namespace Pregunta2
                 obj.Descripcion = txtDescripcion.Text;
                 obj.FechaInventario = DateTime.Now;
                 obj.Precio = Convert.ToDouble(txtPrecio.Text);
-               
-                
+
+
                 Limpiar();
                 Listar();
                 GenerarCodigo();
             }
         }
-        void Listar() {
+        void Listar()
+        {
 
 
             lwInventario.Items.Clear();
