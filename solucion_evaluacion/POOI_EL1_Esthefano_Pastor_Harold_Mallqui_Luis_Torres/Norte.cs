@@ -6,12 +6,39 @@ using System.Threading.Tasks;
 
 namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
 {
-    class Norte
+    class Norte : Central
     {
-        public string Numero { get; set; }
-        public string Nombre { get; set; }
-        public string fecha { get; set; }
-        public string id { get; set; }
-        public string cambio { get; set; }
+       public override double ObtenerSubtotal()
+       {
+         double subTotal;
+
+         switch (NombreMedicamento)
+         {
+           case 0:
+           subTotal = Cantidad * 1.50;
+             break;
+           case 1:
+           subTotal = Cantidad * 12.50;
+             break;
+           case 2:
+           subTotal = Cantidad * 8.90;
+             break;
+
+           default:
+           subTotal = 0;
+             break;
+         }
+            return subTotal;
+       }
+
+        public override double ObtenerDescuento()
+        {
+        double descuento = 0;
+            if (ObtenerSubtotal() <= 30)
+            {
+                descuento = ObtenerSubtotal() * 0.5;
+            }
+            return descuento;
+        }
     }
 }
