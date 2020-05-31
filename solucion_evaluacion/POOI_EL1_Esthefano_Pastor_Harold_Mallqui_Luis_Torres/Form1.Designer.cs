@@ -31,15 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtCantcom = new System.Windows.Forms.TextBox();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnProcesar = new System.Windows.Forms.Button();
             this.cboNomMed = new System.Windows.Forms.ComboBox();
+            this.LwMostrar = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label1
@@ -73,66 +68,12 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Cantidad a comprar";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 373);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Descuento S/.";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 321);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 18);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Subtotal S/.";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 431);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Total S/.";
-            // 
             // txtCantcom
             // 
             this.txtCantcom.Location = new System.Drawing.Point(277, 164);
             this.txtCantcom.Name = "txtCantcom";
             this.txtCantcom.Size = new System.Drawing.Size(188, 26);
             this.txtCantcom.TabIndex = 9;
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Location = new System.Drawing.Point(277, 315);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.ReadOnly = true;
-            this.txtSubtotal.Size = new System.Drawing.Size(188, 26);
-            this.txtSubtotal.TabIndex = 10;
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Location = new System.Drawing.Point(277, 370);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.ReadOnly = true;
-            this.txtDescuento.Size = new System.Drawing.Size(188, 26);
-            this.txtDescuento.TabIndex = 11;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(277, 428);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(188, 26);
-            this.txtTotal.TabIndex = 12;
             // 
             // btnProcesar
             // 
@@ -142,6 +83,7 @@
             this.btnProcesar.TabIndex = 13;
             this.btnProcesar.Text = "Procesar";
             this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
             // cboNomMed
             // 
@@ -155,21 +97,26 @@
             this.cboNomMed.Size = new System.Drawing.Size(187, 28);
             this.cboNomMed.TabIndex = 14;
             // 
+            // LwMostrar
+            // 
+            this.LwMostrar.HideSelection = false;
+            this.LwMostrar.Location = new System.Drawing.Point(39, 245);
+            this.LwMostrar.Name = "LwMostrar";
+            this.LwMostrar.Size = new System.Drawing.Size(427, 223);
+            this.LwMostrar.TabIndex = 17;
+            this.LwMostrar.UseCompatibleStateImageBehavior = false;
+            this.LwMostrar.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(539, 556);
+            this.Controls.Add(this.LwMostrar);
             this.Controls.Add(this.cboNomMed);
             this.Controls.Add(this.btnProcesar);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtDescuento);
-            this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.txtCantcom);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -188,15 +135,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCantcom;
-        private System.Windows.Forms.TextBox txtSubtotal;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnProcesar;
         private System.Windows.Forms.ComboBox cboNomMed;
+        private System.Windows.Forms.ListView LwMostrar;
     }
 }
 
