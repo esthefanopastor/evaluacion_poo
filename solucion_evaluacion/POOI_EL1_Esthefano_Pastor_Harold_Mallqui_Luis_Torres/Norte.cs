@@ -11,5 +11,6 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
         public string Nombre { get; set; }
         public string fecha { get; set; }
         public string id { get; set; }
+        public string cambio { get; set; }
     }
 }
