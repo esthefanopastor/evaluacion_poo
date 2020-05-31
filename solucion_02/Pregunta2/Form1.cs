@@ -20,6 +20,9 @@ namespace Pregunta2
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            //Creacion de la clase equipo 
+            Equipo eqp = new Equipo();
+
 
         }
 
