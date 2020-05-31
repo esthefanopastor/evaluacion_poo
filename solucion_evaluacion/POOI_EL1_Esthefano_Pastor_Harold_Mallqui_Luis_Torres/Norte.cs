@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
 {
-    class Norte
+    class Norte : Central
     {
-        public string Numero { get; set; }
-        public string Nombre { get; set; }
     }
 }

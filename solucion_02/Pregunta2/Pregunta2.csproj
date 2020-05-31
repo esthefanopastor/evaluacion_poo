@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D0BB0E8-D733-46E4-940B-C2EC89705579}</ProjectGuid>
+    <ProjectGuid>{965BB8F0-27D4-4A34-8C9B-23C3B4CC66A5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres</RootNamespace>
-    <AssemblyName>POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres</AssemblyName>
+    <RootNamespace>Pregunta2</RootNamespace>
+    <AssemblyName>Pregunta2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,14 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Central.cs" />
+    <Compile Include="Equipo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Norte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
