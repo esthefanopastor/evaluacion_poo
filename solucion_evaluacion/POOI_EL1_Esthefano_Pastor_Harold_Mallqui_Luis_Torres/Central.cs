@@ -16,7 +16,7 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
         }
 
 
-        public double ObtenerDescuento()
+        public virtual double ObtenerDescuento()
         {
             double descuento = 0;
             if (Cantidad > 5)
@@ -34,13 +34,13 @@ namespace POOI_EL1_Esthefano_Pastor_Harold_Mallqui_Luis_Torres
             switch(NombreMedicamento)
             {
                 case 0:
-                    subtotal = 1.80;
+                    subtotal = Cantidad * 1.80;
                     break;
                 case 1:
-                    subtotal = 13.80;
+                    subtotal = Cantidad * 13.80;
                     break;
                 case 2:
-                    subtotal = 9.50;
+                    subtotal = Cantidad * 9.50;
                     break;
             }
             return subtotal;
