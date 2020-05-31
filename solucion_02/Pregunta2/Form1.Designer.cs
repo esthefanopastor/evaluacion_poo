@@ -107,7 +107,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(41, 465);
+            this.lblMarca.Location = new System.Drawing.Point(41, 450);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(70, 24);
             this.lblMarca.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(41, 542);
+            this.lblPrecio.Location = new System.Drawing.Point(41, 515);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(82, 24);
             this.lblPrecio.TabIndex = 13;
@@ -167,7 +167,7 @@
             "Dell",
             "LG",
             "Samsung"});
-            this.cboMarca.Location = new System.Drawing.Point(45, 492);
+            this.cboMarca.Location = new System.Drawing.Point(45, 477);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(227, 32);
             this.cboMarca.Sorted = true;
@@ -176,7 +176,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(45, 569);
+            this.txtPrecio.Location = new System.Drawing.Point(45, 542);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(227, 32);
             this.txtPrecio.TabIndex = 12;
@@ -237,7 +237,7 @@
             // 
             this.btnRegistrar.AutoSize = true;
             this.btnRegistrar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(144, 640);
+            this.btnRegistrar.Location = new System.Drawing.Point(144, 588);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(128, 34);
             this.btnRegistrar.TabIndex = 16;
@@ -249,7 +249,7 @@
             // 
             this.btnModificar.AutoSize = true;
             this.btnModificar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(144, 680);
+            this.btnModificar.Location = new System.Drawing.Point(144, 628);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(128, 34);
             this.btnModificar.TabIndex = 17;
@@ -261,7 +261,7 @@
             // 
             this.btnListar.AutoSize = true;
             this.btnListar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(144, 720);
+            this.btnListar.Location = new System.Drawing.Point(144, 668);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(128, 34);
             this.btnListar.TabIndex = 18;
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 766);
+            this.ClientSize = new System.Drawing.Size(1132, 715);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistrar);

@@ -8,6 +8,8 @@ namespace Pregunta2
 {
     class Equipo
     {
+
+        public string Codigo { get; set; }
         public string NumeroSerie { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechaInventario { get; set; }
