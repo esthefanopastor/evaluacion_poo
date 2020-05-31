@@ -34,12 +34,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtCantcom = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnProcesar = new System.Windows.Forms.Button();
+            this.cboNomMed = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -103,57 +103,57 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Total S/.";
             // 
-            // textBox1
+            // txtCantcom
             // 
-            this.textBox1.Location = new System.Drawing.Point(277, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 9;
+            this.txtCantcom.Location = new System.Drawing.Point(277, 164);
+            this.txtCantcom.Name = "txtCantcom";
+            this.txtCantcom.Size = new System.Drawing.Size(188, 26);
+            this.txtCantcom.TabIndex = 9;
             // 
-            // textBox2
+            // txtSubtotal
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 315);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(188, 26);
-            this.textBox2.TabIndex = 10;
+            this.txtSubtotal.Location = new System.Drawing.Point(277, 315);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
+            this.txtSubtotal.Size = new System.Drawing.Size(188, 26);
+            this.txtSubtotal.TabIndex = 10;
             // 
-            // textBox3
+            // txtDescuento
             // 
-            this.textBox3.Location = new System.Drawing.Point(277, 370);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(188, 26);
-            this.textBox3.TabIndex = 11;
+            this.txtDescuento.Location = new System.Drawing.Point(277, 370);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.ReadOnly = true;
+            this.txtDescuento.Size = new System.Drawing.Size(188, 26);
+            this.txtDescuento.TabIndex = 11;
             // 
-            // textBox4
+            // txtTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(277, 428);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(188, 26);
-            this.textBox4.TabIndex = 12;
+            this.txtTotal.Location = new System.Drawing.Point(277, 428);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(188, 26);
+            this.txtTotal.TabIndex = 12;
             // 
-            // button1
+            // btnProcesar
             // 
-            this.button1.Location = new System.Drawing.Point(349, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 26);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Procesar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnProcesar.Location = new System.Drawing.Point(349, 505);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(116, 26);
+            this.btnProcesar.TabIndex = 13;
+            this.btnProcesar.Text = "Procesar";
+            this.btnProcesar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cboNomMed
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboNomMed.FormattingEnabled = true;
+            this.cboNomMed.Items.AddRange(new object[] {
             "Azitromicina 500 mg",
             "Ivermectina 6mg ",
             "Hidroxicloriquina 400mg"});
-            this.comboBox1.Location = new System.Drawing.Point(277, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 28);
-            this.comboBox1.TabIndex = 14;
+            this.cboNomMed.Location = new System.Drawing.Point(277, 119);
+            this.cboNomMed.Name = "cboNomMed";
+            this.cboNomMed.Size = new System.Drawing.Size(187, 28);
+            this.cboNomMed.TabIndex = 14;
             // 
             // Form1
             // 
@@ -161,12 +161,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(539, 556);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboNomMed);
+            this.Controls.Add(this.btnProcesar);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.txtSubtotal);
+            this.Controls.Add(this.txtCantcom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -191,12 +191,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtCantcom;
+        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.TextBox txtDescuento;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnProcesar;
+        private System.Windows.Forms.ComboBox cboNomMed;
     }
 }
 
